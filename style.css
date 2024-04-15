@@ -24,11 +24,43 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   
 }
+.book-carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  animation: scroll 100s linear infinite; /* Adjust duration as needed */
+}
+
+.book-card {
+  flex: 0 0 auto;
+  width: 250px; /* Adjust card width as needed */
+  margin-right: 20px; /* Adjust spacing between cards */
+  text-align: center;
+}
+
+.book-card img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 h1 {
   text-align: center;
 }
 .question {
   margin-bottom: 10px;
+  width: 10%;
 }
 
 .question:hover {
@@ -59,9 +91,10 @@ h1 {
   margin-bottom: 10px;
 }
 .book img {
-  max-width: 100px;
+  /* max-width: 100px; */
   margin-right: 10px;
   vertical-align: middle;
+  justify-content: center;
 }
 #quiz {
   display: flex;
@@ -69,6 +102,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   /* flex-direction: column; */
+  margin-right: 10px;
 }
 #question1 {
   width: 200px;
@@ -177,9 +211,29 @@ span {
   color: #d96570;
 }
 .book {
+  padding:20px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   border: 2px solid #636363;
   border-radius: 10px;
+}
+/* .bookdata{
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  /* float: right;
+}
+*/
+.thumbimg{
+width: 250px;
+height: 300px;
+} 
+
+h3{
+  color: rgb(146, 146, 146);
+}
+.bookdetails{
+  display: flex;
+gap: 2rem;
 }
